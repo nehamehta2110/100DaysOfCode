@@ -1,10 +1,11 @@
-#User function Template for python3
-
 class Solution:
 	def quadraticRoots(self, a, b, c):
-        x1 = (-b + (b**2 - 4*a*c)**0.5)//2*a*c
-        x2 = (-b - (b**2 - 4*a*c)**0.5)//2*a*c
-        return [x1, x2]
+            D = b**2 - 4*a*c
+            if D < 0:
+                return [-1]
+            x1 = (-b + D**0.5)//2*a
+            x2 = (-b - D**0.5)//2*a
+            return [int(x1), int(x2)]
 
 
 #{ 
